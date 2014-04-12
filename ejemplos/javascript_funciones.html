@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Funciones</title>
+		<script>
+			function saludar1() {
+				/* DEspliega en un ALERT*/
+				alert("Funcion saludar1");
+			}
+
+			//FUNCIONES ANONIMAS
+			var saludar2 = function(miTexto) {
+				/* recibe el texto en la variable miTexto y lo despliega en un alert*/
+				alert(miTexto);
+			};
+			
+			var saludar3 = function(unaFuncion) {
+				// recibe una funcion y la invoca con el texto saludar 3!
+				unaFuncion();
+			};
+			
+		    //una funcion normal.
+			//saludar1();
+
+			//una funcion anonima.
+			//saludar2("saludar 2");
+
+            //una funcion que USA COMO argumento a otra funcion
+			//saludar3(saludar1);
+			
+			var suma = function(a, b){
+			    return a + b;
+			};
+			
+			var multiplicacion = function(a,b){
+			    return a * b;
+			};
+			
+			var operacion = function(unaFuncion, a, b){
+			    return unaFuncion(a, b);
+			};
+			
+			var resultado = operacion(suma, 3, 3);
+			alert(resultado);
+			
+	        resultado = operacion(function(a,b){
+	            return a / b;
+	        }, 5, 10);
+	        alert(resultado);
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

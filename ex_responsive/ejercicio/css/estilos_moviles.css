@@ -1,0 +1,21 @@
+#menu ul li{
+	list-style-type: none;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 1px;
+	text-transform: uppercase;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+#menu ul{
+	padding-left: 0px;
+}
+
+#menu{
+	padding: 0px;
+}
+
+#encabezado{
+	text-align: center;
+}

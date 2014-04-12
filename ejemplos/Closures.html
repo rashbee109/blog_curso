@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Closures</title>
+		<script>
+		    var nombre = "Juan";
+		   
+			(function closure(){
+			    var nombre = "Daniela";
+			    function saludar(){
+			        alert("Hola " + nombre);
+			    }
+			    
+			    saludar();
+			})();
+			
+			alert("Hola " + nombre);
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

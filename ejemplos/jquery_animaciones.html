@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Ejemplo query selector</title>
+
+        <style type="text/css">
+
+			p {
+				border-style: solid;
+				padding: 10px;
+				margin-bottom: 20px;
+			}
+
+			div {
+				border-style: solid;
+				border-color: green;
+				padding: 10px;
+				margin-bottom: 20px;
+			}
+
+			#parrafo3 {
+				display: none;
+			}
+
+			.relleno {
+				background-image: url("../imagenes/fondo_cuadros.jpg");
+			}
+
+			.esquinas {
+				/* ------------ ESQUINAS REDONDAS ---------------*/
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				-o-border-radius: 10px;
+				border-radius: 10px;
+			}
+
+			.sombras {
+				/*------------------ SOMBRAS ---------------------*/
+				/*sombras*/
+				-webkit-box-shadow: 0px 0px 5px 3px #333;
+				-moz-box-shadow: 0px 0px 5px 3px #333;
+				-o-box-shadow: 0px 0px 5px 3px #333;
+				box-shadow: 0px 0px 5px 3px #333;
+			}
+
+        </style>
+
+        <!-- IMPORTAMOS jQuery-->
+        <script src="../javascript/jquery-1.10.2.min.js"></script>
+        <script>
+			$(function() {
+			    //OBTENGO EL PARRAFO3, EL LOG Y EL BOTON
+				var parrafo_3 = $("#parrafo3");
+				var div_log = $("#log");
+				var boton = $("#boton");
+				
+				//ESCUCHO EL EVENTO CLICK EN EL BOTON
+				boton.click(function() {
+				    //CUANDO PUCHO EL BOTON MUESTRO EL PARRAFO 3 (estaba oculto)
+					parrafo_3.fadeIn("slow");
+				});
+				
+				//ESCUCHO EL EVENTO CLICK EN LA CAJA LOG
+                div_log.click(function() {
+                    //CUANDO PUCHO EL BOTON MUESTRO EL PARRAFO 3 (estaba oculto)
+                    div_log.fadeOut("slow");
+                });
+			});
+        </script>
+    </head>
+    <body>
+
+        <p id="parrafo1" class="relleno">
+            parrafo 1
+        </p>
+        <p id="parrafo2" class="relleno">
+            parrafo 2
+            <span>span1</span>
+            <span> SPAN2</span>
+        </p>
+        <p id="parrafo3">
+            parrafo 3
+        </p>
+
+        <div id="log">
+            log
+        </div>
+
+        <button id="boton">
+            Cambiar parrafo
+        </button>
+
+    </body>
+</html>

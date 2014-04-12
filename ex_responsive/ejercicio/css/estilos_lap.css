@@ -1,0 +1,14 @@
+#caja-der {
+	display: inline-block;
+	width: 32%;
+}
+#caja-izq {
+	display: inline-block;
+	width: 42%;
+	vertical-align: top;
+}
+
+#menu ul li {
+	display: inline-block;
+	width: 20%;
+}
